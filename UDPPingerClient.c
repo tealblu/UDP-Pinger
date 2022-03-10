@@ -96,6 +96,7 @@ int main(int argc, char **argv){
             continue;
         }
         gettimeofday(&starttime,0);
+        printf("\n---------------\n");
         printf("Ping packet send to %s port %d\n", host_to_contact, port);
 
         /* Waiting message come back */
@@ -110,7 +111,6 @@ int main(int argc, char **argv){
         }
         else{
             printf("\nMessage Receive Timeout or Error\n");
-            printf("\n---------------\n");
             continue;
         }
     }
