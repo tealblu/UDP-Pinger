@@ -106,7 +106,7 @@ int main(int argc, char **argv){
             gettimeofday(&endtime,0);
             double timeuse = 1000000*(endtime.tv_sec - starttime.tv_sec) + endtime.tv_usec - starttime.tv_usec;
             //timeuse /=1000; // converting to seconds
-            printf("%i bytes from %s: seq=%i rtt=%0.2f ms\n", recvlen, he->h_addr_list[0], (i+1), timeuse);
+            printf("%i bytes from %s: seq=%i rtt=%0.2f ms\n", recvlen, ip, (i+1), timeuse);
         }
         else{
             printf("\nMessage Receive Timeout or Error\n");
