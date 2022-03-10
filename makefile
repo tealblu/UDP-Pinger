@@ -1,11 +1,10 @@
-all: sender receiver
+all: client server
 
-sender: udp_sender.c
-	gcc -o udp_sender udp_sender.c
+client: UDPPingerClient.c
+	gcc -o UDPPingerClient UDPPingerClient.c
 
-receiver: udp_receiver.c
-	gcc -o udp_receiver udp_receiver.c
+server: UDPPingerServer.c
+	gcc -o UDPPingerServer UDPPingerServer.c
 
-clean: 
-	-rm udp_sender udp_receiver
-
+clean:
+	-rm UDPPingerServer UDPPingerClient
